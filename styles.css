@@ -231,6 +231,77 @@ body {
 }
 
 /* ==============================
+   TEXT SECTIONS (CLEAN STYLE)
+============================== */
+.step {
+  margin-bottom: 24px;
+}
+
+.step h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.step p {
+  color: #666;
+}
+
+/* ==============================
+   GRID (ONLY FOR USE CASES)
+============================== */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==============================
+   USE CASE CARDS
+============================== */
+.use-card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.use-card:hover {
+  border-color: #ddd;
+  transform: translateY(-2px);
+}
+
+/* ==============================
+   CTA STRONG
+============================== */
+.cta.strong {
+  background: #111;
+  color: #fff;
+}
+
+.cta.strong p {
+  color: #ccc;
+}
+
+.cta.strong button {
+  background: #fff;
+  color: #111;
+}
+
+/* ==============================
    FEATURES
 ============================== */
 .feature {
