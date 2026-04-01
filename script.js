@@ -1,8 +1,20 @@
 // ==============================
-// Page Navigation
+// Highlight Active Page
 // ==============================
-function goToContact() {
-  window.location.href = "pages/contact.html";
+function highlightActiveNav() {
+  const links = document.querySelectorAll(".nav-links a");
+
+  let current = window.location.pathname.split("/").pop();
+
+  if (current === "") current = "index.html";
+
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (href.includes(current)) {
+      link.classList.add("active");
+    }
+  });
 }
 
 // ==============================
@@ -62,7 +74,7 @@ function initContactForm() {
 }
 
 // ==============================
-// Navbar Effect
+// Navbar Shadow
 // ==============================
 function initNavbarEffect() {
   const navbar = document.querySelector(".navbar");
@@ -78,9 +90,10 @@ function initNavbarEffect() {
 }
 
 // ==============================
-// Init
+// INIT
 // ==============================
 document.addEventListener("DOMContentLoaded", () => {
+  highlightActiveNav();
   initMobileMenu();
   initContactForm();
   initNavbarEffect();
