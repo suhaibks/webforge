@@ -3,121 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>StackFlow</title>
+  <title>WebForge</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="container nav-container">
-      <h2 class="logo">StackFlow</h2>
+<header class="navbar">
+  <div class="container nav-container">
+    <h2 class="logo">WebForge</h2>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#features">Features</a></li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/features.html">Features</a></li>
+        <li><a href="pages/solutions.html">Solutions</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-      <button class="nav-btn" onclick="scrollToContact()">Get Started</button>
-      <div class="menu-toggle" id="menu-toggle">☰</div>
+    <button class="nav-btn" onclick="goToContact()">Get Started</button>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Websites, CRM & ERP<br>Built for Your Business</h1>
+    <p>Replace multiple tools with one powerful system.</p>
+
+    <div class="hero-actions">
+      <button onclick="goToContact()">Start Now</button>
+      <a href="pages/features.html"><button class="secondary">Explore Features</button></a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>
-        Websites, CRM & ERP<br>
-        Built for Your Business
-      </h1>
-      <p>
-        Replace multiple tools with one powerful system.
-        Manage everything in one place.
-      </p>
+<section class="cta">
+  <div class="container narrow">
+    <h2>Start building your system today</h2>
+    <button onclick="goToContact()">Get Started</button>
+  </div>
+</section>
 
-      <div class="hero-actions">
-        <button onclick="scrollToContact()">Start Now</button>
-        <button class="secondary">View Demo</button>
-      </div>
-    </div>
-  </section>
+<footer class="footer">
+  <p>© 2026 WebForge</p>
+</footer>
 
-  <!-- Features -->
-  <section id="features" class="section">
-    <div class="container narrow">
-      <h2>Everything you need</h2>
-
-      <div class="feature">
-        <h3>Custom Websites</h3>
-        <p>High-performance, SEO-ready websites tailored to your brand.</p>
-      </div>
-
-      <div class="feature">
-        <h3>CRM System</h3>
-        <p>Manage leads, customers, and sales pipelines in one place.</p>
-      </div>
-
-      <div class="feature">
-        <h3>ERP Solutions</h3>
-        <p>Track operations, inventory, and workflows seamlessly.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Solutions -->
-  <section id="solutions" class="section light">
-    <div class="container narrow">
-      <h2>Built for growing businesses</h2>
-
-      <div class="feature">
-        <h3>Multi-Branch Management</h3>
-        <p>Control all your locations from a single dashboard.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Analytics & Insights</h3>
-        <p>Make data-driven decisions with real-time reports.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Automation</h3>
-        <p>Reduce manual work with smart workflows and integrations.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container narrow">
-      <h2>Start building your system today</h2>
-      <p>No complexity. Just results.</p>
-      <button onclick="scrollToContact()">Get Started</button>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container narrow">
-      <h2>Contact</h2>
-
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="Name" required />
-        <input type="email" id="email" placeholder="Email" required />
-        <textarea id="message" placeholder="Tell us about your business"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-
-      <p id="formMessage"></p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p>© 2026 StackFlow</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
