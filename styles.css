@@ -45,6 +45,24 @@ body {
   align-items: center;
 }
 
+/* Add this at the END if not already present */
+
+.nav-links a.active {
+  color: #111;
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background: #111;
+}
+
 .logo {
   font-weight: 600;
   font-size: 18px;
