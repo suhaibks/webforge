@@ -1,3 +1,6 @@
+/* ==============================
+   RESET & BASE
+============================== */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +14,9 @@ body {
   line-height: 1.6;
 }
 
-/* Layout */
+/* ==============================
+   LAYOUT
+============================== */
 .container {
   width: 90%;
   max-width: 1100px;
@@ -22,11 +27,16 @@ body {
   max-width: 700px;
 }
 
-/* Navbar */
+/* ==============================
+   NAVBAR
+============================== */
 .navbar {
   padding: 16px 0;
   border-bottom: 1px solid #eee;
-  position: relative;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -37,18 +47,24 @@ body {
 
 .logo {
   font-weight: 600;
+  font-size: 18px;
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 24px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: #555;
   font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #111;
 }
 
 .nav-btn {
@@ -57,6 +73,7 @@ body {
   padding: 8px 14px;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .menu-toggle {
@@ -65,7 +82,9 @@ body {
   cursor: pointer;
 }
 
-/* Hero */
+/* ==============================
+   HERO
+============================== */
 .hero {
   padding: 80px 20px;
   text-align: center;
@@ -73,13 +92,15 @@ body {
 
 .hero h1 {
   font-size: 32px;
-  margin-bottom: 16px;
   line-height: 1.3;
+  margin-bottom: 16px;
+  font-weight: 600;
 }
 
 .hero p {
   color: #555;
   margin-bottom: 20px;
+  font-size: 15px;
 }
 
 .hero-actions {
@@ -93,13 +114,16 @@ body {
   padding: 10px 16px;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .secondary {
   background: #eee;
 }
 
-/* Sections */
+/* ==============================
+   SECTIONS
+============================== */
 .section {
   padding: 60px 20px;
 }
@@ -107,41 +131,55 @@ body {
 .section h2 {
   font-size: 24px;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .light {
   background: #fafafa;
 }
 
-/* Features */
+/* ==============================
+   FEATURES
+============================== */
 .feature {
   margin-bottom: 20px;
 }
 
 .feature h3 {
   font-size: 16px;
+  margin-bottom: 4px;
 }
 
 .feature p {
-  color: #666;
   font-size: 14px;
+  color: #666;
 }
 
-/* CTA */
+/* ==============================
+   CTA
+============================== */
 .cta {
   text-align: center;
   padding: 60px 20px;
 }
 
+.cta h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
 .cta button {
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 10px 18px;
   background: #111;
   color: white;
   border: none;
+  border-radius: 4px;
 }
 
-/* Form */
+/* ==============================
+   FORM
+============================== */
 form {
   display: flex;
   flex-direction: column;
@@ -152,9 +190,26 @@ input, textarea {
   padding: 10px;
   border: 1px solid #ddd;
   font-size: 14px;
+  border-radius: 4px;
 }
 
-/* Footer */
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  background: #111;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ==============================
+   FOOTER
+============================== */
 .footer {
   text-align: center;
   padding: 25px;
@@ -163,19 +218,41 @@ input, textarea {
   font-size: 13px;
 }
 
-/* Tablet */
+/* ==============================
+   TABLET (≥768px)
+============================== */
 @media (min-width: 768px) {
+
+  .hero {
+    padding: 100px 20px;
+  }
+
   .hero h1 {
     font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 16px;
   }
 
   .section h2 {
     font-size: 28px;
   }
+
+  .feature h3 {
+    font-size: 18px;
+  }
+
+  .feature p {
+    font-size: 15px;
+  }
 }
 
-/* Desktop */
+/* ==============================
+   DESKTOP (≥1024px)
+============================== */
 @media (min-width: 1024px) {
+
   .hero {
     text-align: left;
   }
@@ -193,24 +270,39 @@ input, textarea {
   }
 }
 
-/* Large screens */
+/* ==============================
+   LARGE SCREENS (≥1280px)
+============================== */
 @media (min-width: 1280px) {
+
+  .container {
+    max-width: 1200px;
+  }
+
   .hero h1 {
     font-size: 48px;
   }
+
+  .hero p {
+    font-size: 18px;
+  }
 }
 
-/* Mobile Navigation */
+/* ==============================
+   MOBILE NAVIGATION
+============================== */
 @media (max-width: 768px) {
+
   .nav-links {
     display: none;
     position: absolute;
     right: 20px;
     top: 60px;
-    background: white;
+    background: #fff;
     flex-direction: column;
     border: 1px solid #eee;
     padding: 10px;
+    width: 180px;
   }
 
   .nav-links.active {
