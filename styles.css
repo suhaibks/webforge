@@ -136,7 +136,15 @@ body {
 }
 
 .secondary {
-  background: #eee;
+  background: #f3f4f6;
+  color: #111;
+  border: 1px solid #ddd;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.secondary:hover {
+  background: #e5e7eb;
 }
 
 /* ==============================
