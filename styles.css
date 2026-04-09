@@ -101,6 +101,94 @@ body {
 }
 
 /* ==============================
+   MEGA MENU
+============================== */
+
+.mega-parent {
+  position: relative;
+}
+
+.dropdown-arrow {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* Dropdown Box */
+.mega-menu {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 520px;
+
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 18px;
+  padding: 18px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+
+  z-index: 100;
+}
+
+/* Hover */
+.mega-parent:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  top: 120%;
+}
+
+/* Grid */
+.mega-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* Items */
+.mega-item {
+  padding: 14px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.2s ease;
+  color: #111;
+  font-weight: 500;
+}
+
+.mega-item:hover {
+  background: #f7f7f5;
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+
+  .mega-menu {
+    position: static;
+    width: 100%;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    border: none;
+    padding: 10px 0;
+    display: none;
+  }
+
+  .mega-parent.active .mega-menu {
+    display: block;
+  }
+
+  .mega-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* ==============================
    HERO SECTION
 ============================== */
 
